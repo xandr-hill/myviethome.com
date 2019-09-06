@@ -16,7 +16,10 @@
 			<div class="col-md-3 col-sm-12 col-xs-12">
 				<div class="flat-item">
 					<div class="flat-item-image">
-						<a href="<?php echo $urli; ?>"><img data-src="<?php echo $thumb_url[0]; ?>" src="https://dummyimage.com/263x263/000/fff" alt=""></a>
+						<a href="<?php echo $urli; ?>">
+							<!-- <img data-src="<?php // echo $thumb_url[0]; ?>" src="https://dummyimage.com/263x263/000/fff" alt=""> -->
+							<img src="<?php echo $thumb_url[0]; ?>" alt="">
+						</a>
 						<div class="flat-link">
 							<p style="color:#fff;"><?php echo $title ?></p>
 							<br />

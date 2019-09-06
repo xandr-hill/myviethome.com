@@ -279,11 +279,11 @@ Design and Developed by: http://devitems.com/
         });
     } );
 
-    $(document).on('facetwp-loaded', function() {
-        changeSrc();
-    }); // lazyLoad function refreshing
+    // $(document).on('facetwp-loaded', function() {
+    //     changeSrc();
+    // }); // lazyLoad function refreshing
 
-    changeSrc();
+    // changeSrc();
 
     /* ********************************************
         15. STICKY sticky-header

@@ -37,7 +37,8 @@
 
 					<div class="blog-image">
 						<a href="<?php echo $urli; ?>">
-							<img data-src="<?php echo $thumb_url[0]; ?>" src="https://dummyimage.com/230x230/000/fff" alt="<?php the_title();?>"/>
+							<!-- <img data-src="<?php // echo $thumb_url[0]; ?>" src="https://dummyimage.com/230x230/000/fff" alt="<?php // the_title();?>"/> -->
+							<img src="<?php echo $thumb_url[0]; ?>" alt="<?php the_title();?>"/>
 						</a>
 					</div>
 

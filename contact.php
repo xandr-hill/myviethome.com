@@ -49,7 +49,8 @@ get_header(); // подключаем header.php ?>
                                         </div>
 
                                         <div class="contact-address-image">
-                                           <img data-src="<?php echo get_the_post_thumbnail_url($post_id, 'thumbnail'); ?>" src="https://dummyimage.com/150x150/000/fff" alt="myviethome.com" />
+                                           <!-- <img data-src="<?php // echo get_the_post_thumbnail_url($post_id, 'thumbnail'); ?>" src="https://dummyimage.com/150x150/000/fff" alt="myviethome.com" /> -->
+                                            <img src="<?php echo get_the_post_thumbnail_url($post_id, 'thumbnail'); ?>" alt="myviethome.com" />
                                         </div>
 
                                     </li>

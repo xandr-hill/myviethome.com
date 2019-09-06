@@ -63,7 +63,10 @@
 							<div class="col-md-6 col-sm-4 col-xs-12">
 								<div class="flat-item">
 									<div class="flat-item-image">
-										<a href="<?php the_permalink(); ?>"><img data-src="<?php echo $thumb_url[0]; ?>" src="https://dummyimage.com/360x360/000/fff" alt="myviethome.com"></a>
+										<a href="<?php the_permalink(); ?>">
+											<!-- <img data-src="<?php echo $thumb_url[0]; ?>" src="https://dummyimage.com/360x360/000/fff" alt="myviethome.com"> -->
+											<img src="<?php echo $thumb_url[0]; ?>" alt="myviethome.com">
+										</a>
 										<div class="flat-link">
 											<a href="<?php the_permalink(); ?>">Подробнее</a>
 										</div>

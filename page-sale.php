@@ -62,7 +62,10 @@ foreach( $mypages as $page ) {
 	<div class="col-md-4 col-sm-6 col-xs-12">
 		<div class="flat-item sale bg-gray">
 			<div class="flat-item-image">
-				<a href="<?php echo get_page_link( $page->ID ); ?>"><img data-src="<?php echo get_the_post_thumbnail_url( $page->ID, array(370,370) ); ?>" src="https://dummyimage.com/263x263/000/fff" alt=""></a>
+				<a href="<?php echo get_page_link( $page->ID ); ?>">
+					<!-- <img data-src="<?php // echo get_the_post_thumbnail_url( $page->ID, array(370,370) ); ?>" src="https://dummyimage.com/263x263/000/fff" alt=""> -->
+					<img src="<?php echo get_the_post_thumbnail_url( $page->ID, array(370,370) ); ?>" alt="">
+				</a>
 				<div class="flat-link">
 					<a href="<?php echo get_page_link( $page->ID ); ?>">Подробнее</a>
 				</div>

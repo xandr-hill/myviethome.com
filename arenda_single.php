@@ -1,6 +1,5 @@
 <!-- Start page content -->
 <section id="page-content" class="page-wrapper">
-
 <!-- PROPERTIES DETAILS AREA START -->
 <div class="properties-details-area pt-60 pb-60">
 <div class="container">
@@ -10,89 +9,55 @@
 <div class="pro-details-image mb-60">
 <div class="pro-details-big-image">
 <div class="tab-content">
-
 <?php
-
 // check if the repeater field has rows of data
 if( have_rows('photo_obekt') ):
-
 	$i = 1;
-
  	// loop through the rows of data
     while ( have_rows('photo_obekt') ) : the_row();
-
 ?>
-
 	<div role="tabpanel" class="tab-pane fade in <?php if($i==1){echo 'active';} ?> " id="pro-<?php echo $i; ?>">
-
 		<a href="<?php the_sub_field('img');?>" data-lightbox="lbx-image" data-title="<?php echo the_title(); ?> - <?php echo $i; ?>">
-			<img data-src="<?php the_sub_field('img'); ?>" src="https://dummyimage.com/750x565/000/fff" alt="Квартира в Нячанге" />
+			<!-- <img data-src="<?php // the_sub_field('img'); ?>" src="https://dummyimage.com/750x565/000/fff" alt="Квартира в Нячанге" /> -->
+			<img src="<?php the_sub_field('img'); ?>" alt="Квартира в Нячанге" />
 		</a>
 	</div>
-
 <?php
-	
-	$i++;
-
+		$i++;
     endwhile;
-
 else :
-
     // no rows found
-
     echo 'Фотографии не найдены.';
-
 endif;
-
-
 ?>
-
 </div>
-
 </div>
-
 <div class="pro-details-carousel">
-
 <?php
-
-$z=1;
-
-if( have_rows('photo_obekt') ):
-
-	while ( have_rows('photo_obekt') ) : the_row();
-
+	$z=1;
+	if( have_rows('photo_obekt') ):
+		while ( have_rows('photo_obekt') ) : the_row();
 ?>
-
 	<div class="pro-details-item">
 		<a href="#pro-<?php echo $z; ?>" data-toggle="tab" class="it_prev">
-			<img data-src="<?php the_sub_field('img');?>" src="https://dummyimage.com/180x135/000/fff" alt="myviethome.com"/>
+			<!-- <img data-src="<?php the_sub_field('img');?>" src="https://dummyimage.com/180x135/000/fff" alt="myviethome.com"/> -->
+			<img src="<?php the_sub_field('img'); ?>" alt="Квартира в Нячанге" />
 		</a>
 	</div>
-
 <?php
-
-$z++;
-
-	endwhile;
-
-endif;
-
+			$z++;
+		endwhile;
+	endif;
 ?>
-
 </div>
-
 </div>
 <!-- pro-details-short-info -->
 <div class="pro-details-short-info mb-60">
 	<div class="row">
-
 		<div class="col-sm-6 col-xs-12">
 			<div class="pro-details-condition">
-			
 				<h5>Сведения</h5>
-				
 				<div class="pro-details-condition-inner bg-gray">
-				
 				<ul class="condition-list">
 					<li>
 						<div class="icos ico-garage"></div>
@@ -108,34 +73,19 @@ endif;
 					</li>
 					<li style="font-size: 24px;"><?php the_field( "price" ); ?> $</li>
 				</ul>
-
 				</div>
-
 			</div>
-
 		</div>
-
 		<div class="col-sm-6 col-xs-12">
-
 			<div class="pro-details-amenities">
-
 				<h5>Удобства</h5>
-
 				<div class="pro-details-amenities-inner bg-gray">
-
 					<ul class="amenities-list">
-
-			<?php
-					the_field("xaracter");
-			?>
-				</ul>
-
+						<?php the_field("xaracter"); ?>
+					</ul>
 				</div>
-
 			</div>
-
 		</div>
-
 	</div>
 </div>
 <!-- pro-details-description -->
@@ -197,20 +147,15 @@ endif;
 <div class="row">
 <!-- single-agent -->
 <div class="col-md-5 col-sm-5 col-xs-12">
-
 <div class="pro-details-agent">
-
 	<h3>Контакты агента</h3>
-
 	<div class="single-agent">
-
 		<div class="agent-image">
-			<img data-src="https://myviethome.com/wp-content/themes/Shpud-Theme/images/agents/3.jpg" src="https://dummyimage.com/265x312/000/fff" alt="myviethome.com">
+			<!-- <img data-src="https://myviethome.com/wp-content/themes/Shpud-Theme/images/agents/3.jpg" src="https://dummyimage.com/265x312/000/fff" alt="myviethome.com"> -->
+			<img src="https://myviethome.com/wp-content/themes/Shpud-Theme/images/agents/3.jpg" alt="myviethome.com">
 		</div>
-
 		<div class="agent-info">
 			<div class="agent-name">
-
 				<span>
 					<h5>
 						Койнова
@@ -219,24 +164,18 @@ endif;
 						Алёна Олеговна
 					</h4>
 		        </span>
-
 				<p>Специалист по недвижимости</p>
-
 			</div>
 		</div>
-
 		<div class="agent-info-hover">
-
 			<div class="agent-name">
 				<h5><a href="mailto:mvhestate@gmail.com">Койнова Алёна</a></h5>
 				<p>Специалист по недвижимости</p>
 			</div>
-
 			<ul class="agent-address">
 				<li>&#128222;&#x0020;+84 32 704 79 30 </li>
 				<li>&#x1f4e7;&#x0020;mvhestate@gmail.com</li>
 			</ul>
-
 			<center>
 				<ul class="social-media">
 				<li><a href="https://www.facebook.com/nelen.koinova"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
@@ -249,7 +188,6 @@ endif;
 	</div>
 </div>
 </div>
-
 <!-- leave-massage -->
 <div class="col-md-7  col-sm-7 col-xs-12">
 	<div class="leave-review">
@@ -257,87 +195,60 @@ endif;
 	<?php echo do_shortcode('[contact-form-7 id="51" title="Форма обратной связи (страницы с недвижимостью)"]'); ?>
 	</div>
 </div>
-
-
-					<div class="col-md-12 row social-icons">
-						<div class="col-md-8 col-sm-12 social-title">							
-							<span>
-								<i><h4>Наши группы в социальных сетях:</h4></i>
-							</span>
-						</div>
-
+<div class="col-md-12 row social-icons">
+	<div class="col-md-8 col-sm-12 social-title">							
+		<span>
+			<i><h4>Наши группы в социальных сетях:</h4></i>
+		</span>
+	</div>
 <?php
-	if( in_category('arenda') ) {
-
-		$vk_link = 'https://vk.com/viethome';
-		$fb_link = 'https://www.facebook.com/viethomeestate/';
-		$insta_link = 'https://www.instagram.com/myviethomerent/';
-
-	} else {
-
-		$vk_link = 'https://vk.com/myviethomesale';
-		$fb_link = 'https://www.facebook.com/myviethomesale/';
-		$insta_link = 'https://www.instagram.com/myviethomesale/';
-
-	};
+		if( in_category('arenda') ) {
+			$vk_link = 'https://vk.com/viethome';
+			$fb_link = 'https://www.facebook.com/viethomeestate/';
+			$insta_link = 'https://www.instagram.com/myviethomerent/';
+		} else {
+			$vk_link = 'https://vk.com/myviethomesale';
+			$fb_link = 'https://www.facebook.com/myviethomesale/';
+			$insta_link = 'https://www.instagram.com/myviethomesale/';
+		};
 ?>
-						<div class="col-md-4 col-sm-12 social-img">
-							<a href="<?php echo $fb_link; ?>" >
-								<div class="address-icon">
-									<div class="icos ico-fb-sm"></div>
-								</div>
-							</a>
-							<a href="<?php echo $vk_link; ?>" >
-								<div class="address-icon">
-									<div class="icos ico-vk-sm"></div>
-								</div>
-							</a>
-							<a href="<?php echo $insta_link; ?>" >
-								<div class="address-icon">					
-									<div class="icos ico-insta-sm"></div>
-								</div>
-							</a>
-						</div>
-
-					</div>
-
-					<div class="col-md-12 comments-tpl">
-<?php
-					comments_template();
-?>
-					</div>
-
+	<div class="col-md-4 col-sm-12 social-img">
+		<a href="<?php echo $fb_link; ?>">
+			<div class="address-icon">
+				<div class="icos ico-fb-sm"></div>
+			</div>
+		</a>
+		<a href="<?php echo $vk_link; ?>">
+			<div class="address-icon">
+				<div class="icos ico-vk-sm"></div>
+			</div>
+		</a>
+		<a href="<?php echo $insta_link; ?>">
+			<div class="address-icon">					
+				<div class="icos ico-insta-sm"></div>
+			</div>
+		</a>
+	</div>
+</div>
+<div class="col-md-12 comments-tpl">
+	<?php comments_template(); ?>
 </div>
 </div>
 </div>
-
+</div>
 <div class="col-md-4 col-sm-12 row">
-
-<?php
-
-	dynamic_sidebar('ads-widget');
-
-?>
-
+<?php dynamic_sidebar('ads-widget'); ?>
 </div>
-
 </div>
-
 <?php
-
-
 	if( in_category('prodazha') ) {
 		get_sidebar('sale');
 	} else {
 		get_sidebar('rent');
 	}
 	// подключаем sidebar
-
 ?>
-
 </div>
-
 </div>
-
 </section>
 <!-- End page content -->

@@ -122,7 +122,10 @@ if ($query->have_posts()) {
 <div class="col-md-4 col-sm-6 col-xs-12">
 	<div class="flat-item">
 		<div class="flat-item-image">
-			<a href="<?php the_permalink(); ?>"><img data-src="<?php echo $thumb_url[0]; ?>" src="https://dummyimage.com/263x263/000/fff" alt="myviethome.com"></a>
+			<a href="<?php the_permalink(); ?>">
+				<!-- <img data-src="<?php // echo $thumb_url[0]; ?>" src="https://dummyimage.com/263x263/000/fff" alt="myviethome.com"> -->
+				<img src="<?php echo $thumb_url[0]; ?>" alt="myviethome.com">
+			</a>
 			<div class="flat-link">
 				<a href="<?php the_permalink(); ?>">Подробнее</a>
 			</div>

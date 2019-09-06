@@ -74,7 +74,8 @@ if( have_rows('photo_obekt') ):
 ?>
 			<div role="tabpanel" class="tab-pane fade in <?php if($i==1){echo 'active';} ?> " id="pro-<?php echo $i; ?>">
 				<a href="<?php the_sub_field('img');?>" data-lightbox="lbx-image" data-title="<?php echo the_title(); ?> - <?php echo $i; ?>">
-					<img data-src="<?php the_sub_field('img'); ?>" src="https://dummyimage.com/600x400/000/fff" alt="Квартира в Нячанге" />
+					<!-- <img data-src="<?php // the_sub_field('img'); ?>" src="https://dummyimage.com/600x400/000/fff" alt="Квартира в Нячанге" /> -->
+					<img src="<?php the_sub_field('img'); ?>" alt="Квартира в Нячанге" />
 				</a>
 			</div>
 <?php
@@ -95,7 +96,8 @@ endif;
 				?>
 						<div class="pro-details-item">
 							<a href="#pro-<?php echo $z; ?>" data-toggle="tab" class="it_prev">
-								<img data-src="<?php the_sub_field('img');?>" src="https://dummyimage.com/600x400/000/fff" alt="myviethome.com"/>
+								<!-- <img data-src="<?php // the_sub_field('img');?>" src="https://dummyimage.com/600x400/000/fff" alt="myviethome.com"/> -->
+								<img src="<?php the_sub_field('img');?>" alt="myviethome.com"/>
 							</a>
 						</div>
 				<?php
@@ -141,17 +143,22 @@ endif;
 							<div class="col-sm-3 col-xs-12">
 								<div class="flat-item">
 									<div class="flat-item-image">
-										<a href="<?php the_permalink(); ?>"><img data-src="<?php echo $thumb_url[0]; ?>" src="https://dummyimage.com/600x400/000/fff" alt="myviethome.com"></a>
+										<a href="<?php the_permalink(); ?>">
+											<!-- <img data-src="<?php // echo $thumb_url[0]; ?>" src="https://dummyimage.com/600x400/000/fff" alt="myviethome.com"> -->
+											<img data-src="<?php echo $thumb_url[0]; ?>" alt="myviethome.com">
+										</a>
 										<div class="flat-link">
 											<a href="<?php the_permalink(); ?>">Подробнее</a>
 										</div>
 										<ul class="flat-desc">
 											<li>
-												<img data-src="https://myviethome.com/wp-content/themes/Shpud-Theme/images/icons/wallet.png" src="https://dummyimage.com/600x400/000/fff" alt="myviethome.com">
+												<!-- <img data-src="https://myviethome.com/wp-content/themes/Shpud-Theme/images/icons/wallet.png" src="https://dummyimage.com/600x400/000/fff" alt="myviethome.com"> -->
+												<img src="https://myviethome.com/wp-content/themes/Shpud-Theme/images/icons/wallet.png" alt="myviethome.com">
 												<span><?php echo get_field( "price" ); ?>$</span>
 											</li>
 											<li>
-												<img data-src="https://myviethome.com/wp-content/themes/Shpud-Theme/images/icons/5.png" src="https://dummyimage.com/600x400/000/fff" alt="myviethome.com">
+												<!-- <img data-src="https://myviethome.com/wp-content/themes/Shpud-Theme/images/icons/5.png" src="https://dummyimage.com/600x400/000/fff" alt="myviethome.com"> -->
+												<img src="https://myviethome.com/wp-content/themes/Shpud-Theme/images/icons/5.png" alt="myviethome.com">
 												<span><?php echo get_field( "count_komnat" ); ?></span>
 											</li>
 										</ul>
