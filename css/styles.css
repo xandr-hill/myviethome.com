@@ -1,0 +1,92 @@
+.header-info h6 {
+    line-height: 15px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.main-menu {display: -webkit-flex; display: flex; margin-bottom: 0;}
+.main-menu li a {
+    text-decoration: none;
+}
+
+
+.main-menu > li:hover > a, .drop-menu > li:hover > a, .single-mega-item > li:hover > a {
+    color: #7c99a1;
+    text-decoration: none;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, span a, li a {
+    /*color: inherit;*/
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+
+.facetwp-dropdown {
+    background: #2c4c52;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+}
+option {
+    background: #2c4c52 none repeat scroll 0 0;
+    border: 0 solid #626262;
+    font-size: 13px;
+    padding-left: 10px;
+}
+.facetwp-slider-label {color:#ffffff;}
+
+.slick-list {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+.facetwp-pager {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.facetwp-pager-label {display: none !important;}
+.facetwp-page {
+    padding: 5px 10px !important;
+    background: #2c4c52;
+    color: #ffffff;
+    border-radius: 5px;
+}
+.facetwp-page:hover {
+    padding: 5px 10px !important;
+    background: #7c99a1;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.facetwp-page+.active{padding: 5px 10px !important;background: #7c99a1;color: #ffffff;border-radius: 5px;}
+.facetwp-page+.active:hover{
+    padding: 5px 10px !important;
+    background: #7c99a1;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.page-numbers {text-align: center;}
+.page-numbers li{display: inline-block;}
+.page-numbers li .page-numbers {background: #02A5A0;padding: 5px 10px;
+font-size: 16px;color: #ffffff;border-radius: 6px;border:1px solid #02A5A0;}
+.page-numbers li .page-numbers:hover {border:1px solid #000000;}
+.page-numbers li .current {background: #cccccc;}
+
+.it_prev {height: 135px !important;}
+
+.slick-track {height: 135px;overflow-y: hidden;}
+
+
