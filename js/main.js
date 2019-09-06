@@ -279,11 +279,11 @@ Design and Developed by: http://devitems.com/
         });
     } );
 
-    // $(document).on('facetwp-loaded', function() {
-    //     changeSrc();
-    // }); // lazyLoad function refreshing
+    $(document).on('facetwp-loaded', function() {
+        changeSrc();
+    }); // lazyLoad function refreshing
 
-    // changeSrc();
+    changeSrc();
 
     /* ********************************************
         15. STICKY sticky-header
@@ -292,19 +292,18 @@ Design and Developed by: http://devitems.com/
         $(window).on('scroll', function() {
             if ($(this).scrollTop() > hth){  
                 $('#sticky-header').addClass("sticky");
-            }
-            else{
+            } else {
                 $('#sticky-header').removeClass("sticky");
-            }
+            };
         });
     /* ********************************************************* */
 
     function changeSrc() {
-
-        [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
-            img.setAttribute('src', img.getAttribute('data-src'));
-            img.onload = function() {
-                img.removeAttribute('data-src');
+        $.each( $('img[data-src]'), function(key, img) {
+            $(this).attr( 'src', $(this).attr('data-src') );
+            $(this).onload = function() {
+                $(this).attr('data-src', '');
+                console.log('data-src of ' + key + '[' + img + '] is empty now...');
             };
         });
 

@@ -40,7 +40,7 @@ endif;
 ?>
 	<div class="pro-details-item">
 		<a href="#pro-<?php echo $z; ?>" data-toggle="tab" class="it_prev">
-			<!-- <img data-src="<?php the_sub_field('img');?>" src="https://dummyimage.com/180x135/000/fff" alt="myviethome.com"/> -->
+			<!-- <img data-src="<?php // the_sub_field('img');?>" src="https://dummyimage.com/180x135/000/fff" alt="myviethome.com"/> -->
 			<img src="<?php the_sub_field('img'); ?>" alt="Квартира в Нячанге" />
 		</a>
 	</div>

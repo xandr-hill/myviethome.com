@@ -19,7 +19,7 @@
 
 		$id=get_the_ID();//Получаем уд записи
 		$thumb_id = get_post_thumbnail_id($id);//Получаем ID миниатюры
-		$thumb_url = wp_get_attachment_image_src($thumb_id,array(230,230));//Получаем адресс миниатюры
+		$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail');//Получаем адресс миниатюры
 		$urli=get_permalink($id);//Ссылка на запись
 
 		if( in_category('novosti') ) {
@@ -38,7 +38,7 @@
 					<div class="blog-image">
 						<a href="<?php echo $urli; ?>">
 							<!-- <img data-src="<?php // echo $thumb_url[0]; ?>" src="https://dummyimage.com/230x230/000/fff" alt="<?php // the_title();?>"/> -->
-							<img src="<?php echo $thumb_url[0]; ?>" alt="<?php the_title();?>"/>
+							<img src="<?php echo $thumb_url[0]; ?>" width="<?php echo $thumb_url[2]; ?>" alt="<?php the_title();?>"/>
 						</a>
 					</div>
 
