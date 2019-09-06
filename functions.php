@@ -70,14 +70,6 @@ register_sidebar( array(
 		'after_title'   => '</h2>',
 ) );
 
-
-
-// add_action( 'widgets_init', 'register_my_widgets' );
-// function register_my_widgets(){
-	
-// }
-
-
 /*
  * Проверят является ли текущая постоянная страница дочерней страницей
  * Возвращает true или false
@@ -106,7 +98,6 @@ if (!class_exists('clean_comments_constructor')) { // если класс уже
 	    	echo '<div class="media-left">'.get_avatar($comment, 64, '', get_comment_author(), array('class' => 'media-object'))."</div>\n"; // покажем аватар с размером 64х64
 	    	echo '<div class="media-body">';
 	    	echo '<span class="meta media-heading">Автор: '.get_comment_author()."\n"; // имя автора коммента
-	    	//echo ' '.get_comment_author_email(); // email автора коммента, плохой тон выводить почту
 	    	echo ' '.get_comment_author_url(); // url автора коммента
 	    	echo ' Добавлено '.get_comment_date('F j, Y в H:i')."\n"; // дата и время комментирования
 	    	if ( '0' == $comment->comment_approved ) echo '<br><em class="comment-awaiting-moderation">Ваш комментарий будет опубликован после проверки модератором.</em>'."\n"; // если комментарий должен пройти проверку
@@ -180,7 +171,6 @@ if (!function_exists('add_styles')) { // если ф-я уже есть в до�
 	    wp_enqueue_style( 'lightbox', get_template_directory_uri().'/lightbox2/src/css/lightbox.css' ); // стили лайтбокса
 		wp_enqueue_style( 'core', get_template_directory_uri().'/css/core.css' );
 		wp_enqueue_style( 'shorts', get_template_directory_uri().'/css/shortcodes.css' );
-		// wp_enqueue_style( 'responsive', get_template_directory_uri().'/css/responsive.css' );
 		wp_enqueue_style( 'load-fa', get_template_directory_uri().'/css/font-awesome.min.css' );
 		wp_enqueue_style( 'styles', get_template_directory_uri().'/css/styles.css' );
 		wp_enqueue_style( 'main', get_template_directory_uri().'/style.css' ); // основные стили шаблона

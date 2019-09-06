@@ -262,14 +262,14 @@ Design and Developed by: http://devitems.com/
     $('.wp-block-image img, img.size-large').each( function( ind ) {
 
         $(this).wrap( function(){
-             return( '<a href="' + $(this).attr('src') + '" data-lightbox="' + my_string + ind + '" data-top="' + Math.floor($(this).position().top + /*$(window).scrollTop())*/ + $('.breadcrumbs-area').height()) + '"></a>' );
+             return( '<a href="' + $(this).attr('src') + '" data-lightbox="' + my_string + ind + '" data-top="' + Math.floor($(this).position().top + $('.breadcrumbs-area').height()) + '"></a>' );
         });
 
     } );
 
     $('.wp-block-gallery img').each( function( i ) {
         $(this).wrap( function(){
-             return( '<a href="' + $(this).attr('src') + '" data-lightbox="' + my_string + 'x' + '" data-top="' + Math.floor($(this).position().top + /*$(window).scrollTop())*/ + $('.breadcrumbs-area').height()) + '"></a>' );
+             return( '<a href="' + $(this).attr('src') + '" data-lightbox="' + my_string + 'x' + '" data-top="' + Math.floor($(this).position().top + $('.breadcrumbs-area').height()) + '"></a>' );
         });
     } );
 

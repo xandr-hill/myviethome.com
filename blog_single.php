@@ -117,19 +117,13 @@ while ( have_posts() ) : the_post(); // старт цикла
 
 		</div>
 
-<?php
-
+<?php // подключаем sidebar
 	if( in_category('novosti') ) {
 		get_sidebar('news');
 	} else {
 		get_sidebar('blog');
 	}
-	// подключаем sidebar
-
 ?>
-
-
-
 	</div>
 
 </div>

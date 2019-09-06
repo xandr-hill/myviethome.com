@@ -20,9 +20,6 @@ $category = get_queried_object();
 if( $category->term_id==12 or $category->term_id==13 or in_category('vajno-znat') or in_category('zhilie') or in_category('pokupki') or in_category('prikljuchenija') or in_category('eda-i-restorani') ) {
 	include_once $_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/Shpud-Theme/blog.php';
 };
-// } else {
-// 	include_once $_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/Shpud-Theme/arenda.php';
-// };
 
 ?>
 

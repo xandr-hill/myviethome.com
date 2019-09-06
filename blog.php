@@ -74,19 +74,13 @@
 
 </div> <!-- .container > .row -->
 
-
-
-<?php //get_sidebar(); // подключаем sidebar.php ?>
-
 </div>
 </div>
 </div>
 <!-- FEATURED FLAT AREA END -->
 
-	<div class="row blog-pagination">
-
+<div class="row blog-pagination">
 <?php
-
 		// Пагинация
 		global $wp_query;
 		$big = 999999999;
@@ -99,9 +93,7 @@
 		    'next_text'    => __('Еще »'),
 			'total' => $wp_query->max_num_pages
 		) );
-
 ?>
-
-	</div> <!-- .row .blog-pagination -->
+</div> <!-- .row .blog-pagination -->
 
 </section>

@@ -152,13 +152,6 @@ endif;
 
 			$category_ids = array();
 			foreach($categories as $individual_category) {
-				// if ($individual_category == 'rayon') {
-					// if (1 == $individual_category->category_parent) {
-        				// get_category_link($childcat->cat_ID);
-        				// $childcat->category_description;
-        				// $childcat->cat_name;
-    				// }
-				// };
 				$category_ids[] = $individual_category->term_id;
 			};
 			$args=array(
@@ -178,18 +171,13 @@ endif;
 		<div class="col-md-4">
 			<div class="flat-item">
 				<div class="flat-item-image">
-
-					<!-- <span class="for-sale">Читайте также:</span> -->
-
 					<a href="<?php the_permalink(); ?>">
 					<?php 	the_post_thumbnail(); ?>
 					</a>
-						
 					<div class="flat-link">
 						<p style="color:#fff;"><?php the_title(); ?></p>
 						<a href="<?php the_permalink(); ?>">Подробнее</a>
 					</div>
-
 				</div>
 			</div>
 		</div>

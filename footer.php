@@ -1,4 +1,3 @@
-
 <!-- Start footer area -->
 <footer id="footer" class="footer-area bg-2 bg-opacity-black-90">
 <div class="footer-top pt-40 pb-80">
@@ -8,9 +7,7 @@
 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 <div class="footer-widget">
 <h6 class="footer-titel">Связаться с нами</h6>
-
 	<ul class="footer-address">
-		
 		<li>
 			<a href="tel:+84327047930">
 				<div class="address-icon">					
@@ -34,7 +31,7 @@
 			</a>	
 		</li>
 		<li>
-			<a href="https://www.facebook.com/MYVIETHOMEINFO/" >
+			<a href="https://www.facebook.com/MYVIETHOMEINFO/">
 				<div class="address-icon">					
 					<!-- <div class="icos ico-fb-sm"></div> -->
 					<i class="fa fa-facebook-square"></i>
@@ -45,9 +42,8 @@
 			</a>
 		</li>
 		<li>
-			<a href="https://vk.com/myviethomeinfo" >
-				<div class="address-icon">					
-					<!-- <div class="icos ico-vk-sm"></div> -->
+			<a href="https://vk.com/myviethomeinfo">
+				<div class="address-icon">
 					<i class="fa fa-vk"></i>
 				</div>
 				<div class="address-info">
@@ -56,9 +52,8 @@
 			</a>
 		</li>
 		<li>
-			<a href="https://www.instagram.com/myviethomeinfo/" >
-				<div class="address-icon">					
-					<!-- <div class="icos ico-insta-sm"></div> -->
+			<a href="https://www.instagram.com/myviethomeinfo/">
+				<div class="address-icon">
 					<i class="fa fa-instagram"></i>
 				</div>
 				<div class="address-info">
@@ -66,7 +61,6 @@
 				</div>
 			</a>
 		</li>
-
 	</ul>
 </div>
 </div>
@@ -75,7 +69,6 @@
 <div class="footer-widget middle">
 <h6 class="footer-titel">Новости</h6>
 <ul class="footer-latest-news">
-
 <?php
 $the_query_tab_one = new WP_Query(array('cat' => 12,'posts_per_page' => 3));
 for($i=0;$i<=4;$i++)
@@ -95,8 +88,8 @@ echo '<li>
 <h6><a href="'.$urli.'">'.$titles.'</a></h6>
 </div>
 </li>';
-}}?>
-
+}}
+?>
 </ul>
 </div>
 </div>
@@ -126,7 +119,6 @@ echo '<li>
 </footer>
 <!-- End footer area -->
 </div>
-
 <?php wp_footer(); // необходимо для работы плагинов и функционала  ?>
 
 <!-- Yandex.Metrika counter -->
@@ -142,5 +134,4 @@ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = 
 <script async src="//ehzggd.com/mn9l17912/ilvpm003y/oln/786/vqu768kypc01r"></script>
 
 </body>
-
 </html>

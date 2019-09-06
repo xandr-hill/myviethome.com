@@ -5,8 +5,6 @@
 * @subpackage your-clean-template-3
 */
 get_header(); // подключаем header.php ?>
-
-
 <!-- BREADCRUMBS AREA START -->
 <div class="breadcrumbs-area bg-2 bg-opacity-black-70">
 <div class="container">
@@ -20,7 +18,6 @@ get_header(); // подключаем header.php ?>
 </div>
 </div>
 </div>
-
 <?php
 if(get_field( "nedvij" )[0]=='red'){
 include_once $_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/Shpud-Theme/arenda_single.php';
@@ -29,7 +26,4 @@ else{
 include_once $_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/Shpud-Theme/blog_single.php';
 }
 ?>
-
-<!-- <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script> -->
-
 <?php get_footer(); // подключаем footer.php ?>

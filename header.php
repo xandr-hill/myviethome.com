@@ -3,7 +3,6 @@
 
 <head>
 <meta charset="utf-8">
-<!-- <meta http-equiv="x-ua-compatible" content="ie=edge"> -->
 <title><?php // Генерируем тайтл в зависимости от контента с разделителем " | "
 	global $page, $paged;
 	wp_title( '|', true, 'right' );
@@ -16,37 +15,8 @@
 ?></title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-
 <!-- Favicon -->
 <link rel="shortcut icon" type="image/x-icon" href="https://myviethome.com/wp-content/themes/Shpud-Theme/images/logo2.png">
-
-<!-- All css files are included here. -->
-<!-- Bootstrap fremwork main css -->
-<!-- <link rel="stylesheet"  href="https://myviethome.com/wp-content/themes/Shpud-Theme/css/bootstrap.min.css"> -->
-<!-- nivo slider CSS -->
-<!-- <link rel="stylesheet"  href="https://myviethome.com/wp-content/themes/Shpud-Theme/css/nivo-slider.css"/> -->
-<!-- This core.css file contents all plugings css file. -->
-<!-- <link rel="stylesheet"  href="https://myviethome.com/wp-content/themes/Shpud-Theme/css/core.css"> -->
-<!-- Theme shortcodes/elements style -->
-<!-- <link rel="stylesheet"  href="https://myviethome.com/wp-content/themes/Shpud-Theme/css/shortcodes.css"> -->
-
-<!-- Responsive css -->
-<!-- <link rel="stylesheet"  href="https://myviethome.com/wp-content/themes/Shpud-Theme/css/responsive.css"> -->
-<!-- User style -->
-<!-- <link rel="stylesheet"  href="https://myviethome.com/wp-content/themes/Shpud-Theme/css/custom.css"> -->
-
-<!-- Style customizer (Remove these two lines please) -->
-<!-- <link rel="stylesheet"  href="https://myviethome.com/wp-content/themes/Shpud-Theme/css/style-customizer.css"> -->
-
-<!-- <link rel="stylesheet"  href="https://myviethome.com/wp-content/themes/Shpud-Theme/css/styles.css"> -->
-
-<!-- <link rel="stylesheet"  href="https://myviethome.com/wp-content/themes/Shpud-Theme/lightbox2/src/css/lightbox.css"> -->
-
-<!-- Theme main style -->
-<!-- <link rel="stylesheet"  href="<?php //echo get_stylesheet_uri() ?>" /> -->
-
-<!-- Modernizr JS -->
-<!-- <script src="https://myviethome.com/wp-content/themes/Shpud-Theme/js/modernizr-2.8.3.min.js"></script> -->
 
 <?php wp_head(); // необходимо для работы плагинов и функционала ?>
 
@@ -56,21 +26,11 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-142446321-1');
 </script>
 
-
 </head>
-
 <body>
-<!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
-
-<!-- Facebook Like buttons widget -->
-<!-- <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v3.3&appId=197640133933909&autoLogAppEvents=1"></script> -->
 
 <!-- Body main wrapper start -->
 <div class="wrapper">
@@ -91,7 +51,6 @@
 <div class="company-info clearfix">
 <div class="company-info-item">
 <div class="header-icon">
-	<!-- <img src="https://myviethome.com/wp-content/themes/Shpud-Theme/images/icons/phone.png" alt="myviethome.com"> -->
 	<div class="icos ico-phone"></div>
 </div>
 <div class="header-info">
@@ -101,7 +60,6 @@
 </div>
 <div class="company-info-item">
 <div class="header-icon">
-	<!-- <img src="https://myviethome.com/wp-content/themes/Shpud-Theme/images/icons/mail-open.png" alt="myviethome.com"> -->
 	<div class="icos ico-mail"></div>
 </div>
 <div class="header-info">
@@ -114,12 +72,7 @@
 <div class="col-md-3 col-sm-6 col-xs-12">
 <div class="header-search clearfix">
 <form method="get">
-<!-- <button class="search-icon" type="submit"> -->
-	<!-- <img src="https://myviethome.com/wp-content/themes/Shpud-Theme/images/icons/search.png" alt="myviethome.com"> -->
-	<!-- <div class="icos ico-search"></div> -->
-<!-- </button> -->
 <?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
-<?php // get_search_form(); ?>
 </form>
 </div>
 </div>
@@ -140,9 +93,7 @@
 
 	<nav id="primary-menu">
 
-
 <?php
-
 		wp_nav_menu( array(
 			'theme_location'  => '',
 			'menu'            => 'main-menu', 
@@ -161,9 +112,7 @@
 			'depth'           => 0,
 			'walker'          => '',
 		) );
-
 ?>	
-
 	</nav>
 
 </div>
@@ -185,7 +134,6 @@
 	<nav id="dropdown">
 
 <?php
-
 		wp_nav_menu( array(
 			'theme_location'  => '',
 			'menu'            => 'main-menu', 
@@ -204,7 +152,6 @@
 			'depth'           => 0,
 			'walker'          => '',
 		) );
-
 ?>	
 
 	</nav>
@@ -216,8 +163,3 @@
 </div>
 </div>
 <!-- MOBILE MENU AREA END -->
-
-
-
-
-
