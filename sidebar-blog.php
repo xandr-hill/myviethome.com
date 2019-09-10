@@ -9,7 +9,7 @@
 			if($id!=null or $id!='' or $id!=0){		
 				$title=$the_query_tab_one->posts[$i]->post_title;//Получаем заголовок
 				$thumb_id = get_post_thumbnail_id($id);//Получаем ID миниатюры
-				$thumb_url = wp_get_attachment_image_src($thumb_id,array(263,263));//Получаем адресс миниатюры
+				$thumb_url = wp_get_attachment_image_src($thumb_id,'big-thumb');//Получаем адресс миниатюры
 				$urli=get_permalink($id);//Ссылка на запись
 		//Код вывода
 ?>
@@ -17,8 +17,7 @@
 				<div class="flat-item">
 					<div class="flat-item-image">
 						<a href="<?php echo $urli; ?>">
-							<!-- <img data-src="<?php // echo $thumb_url[0]; ?>" src="https://dummyimage.com/263x263/000/fff" alt=""> -->
-							<img src="<?php echo $thumb_url[0]; ?>" alt="">
+							<img data-src="<?php echo $thumb_url[0]; ?>" height="<?php $thumb_url[1]; ?>" width="<?php $thumb_url[2]; ?>" alt="myviethome.com">
 						</a>
 						<div class="flat-link">
 							<p style="color:#fff;"><?php echo $title ?></p>

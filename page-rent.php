@@ -116,15 +116,14 @@ if ($query->have_posts()) {
     // "Извлечение" каждой последующей записи
     $query->the_post();
 	$id = get_the_ID(); //Получаем ID записи
-	$thumb_id = get_post_thumbnail_id($id); //Получаем ID миниатюры
-	$thumb_url = wp_get_attachment_image_src($thumb_id,'medium'); //Получаем адрес миниатюры
+	$thumb_id = get_post_thumbnail_id($query->ID); //Получаем ID миниатюры
+	$thumb_url = wp_get_attachment_image_src($thumb_id,'big-thumb'); //Получаем адрес миниатюры
 ?>
 <div class="col-md-4 col-sm-6 col-xs-12">
 	<div class="flat-item">
 		<div class="flat-item-image">
 			<a href="<?php the_permalink(); ?>">
-				<!-- <img data-src="<?php // echo $thumb_url[0]; ?>" src="https://dummyimage.com/263x263/000/fff" alt="myviethome.com"> -->
-				<img src="<?php echo $thumb_url[0]; ?>" height="<?php echo $thumb_url[1]; ?>" width="<?php echo $thumb_url[2]; ?>" alt="myviethome.com">
+				<img data-src="<?php echo $thumb_url[0]; ?>" height="<?php $thumb_url[1]; ?>" width="<?php $thumb_url[2]; ?>" alt="myviethome.com">
 			</a>
 			<div class="flat-link">
 				<a href="<?php the_permalink(); ?>">Подробнее</a>

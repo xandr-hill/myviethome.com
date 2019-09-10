@@ -59,15 +59,14 @@ foreach( $mypages as $page ) {
 	$content = apply_filters( 'the_content', $content );
 	$post_slug = $page->post_name;
 
-	$thumb_id = get_post_thumbnail_id($id); //Получаем ID миниатюры
-	$thumb_url = wp_get_attachment_image_src($thumb_id,array(370,370)); //Получаем адрес миниатюры
+	$thumb_id = get_post_thumbnail_id($page->ID); //Получаем ID миниатюры
+	$thumb_url = wp_get_attachment_image_src($thumb_id,'big-thumb'); //Получаем адрес миниатюры
 ?>
 	<div class="col-md-4 col-sm-6 col-xs-12">
 		<div class="flat-item sale bg-gray">
 			<div class="flat-item-image">
 				<a href="<?php echo get_page_link( $page->ID ); ?>">
-					<!-- <img data-src="<?php // echo get_the_post_thumbnail_url( $page->ID, array(370,370) ); ?>" src="https://dummyimage.com/263x263/000/fff" alt=""> -->
-					<img src="<?php echo get_the_post_thumbnail_url( $page->ID, 'medium' ); ?>" alt="">
+					<img data-src="<?php echo $thumb_url[0]; ?>" height="<?php $thumb_url[1]; ?>" width="<?php $thumb_url[2]; ?>" alt="myviethome.com">
 				</a>
 				<div class="flat-link">
 					<a href="<?php echo get_page_link( $page->ID ); ?>">Подробнее</a>
@@ -82,11 +81,8 @@ foreach( $mypages as $page ) {
 			</div>
 		</div>
 	</div>
-<?php
 
-}
-
-?>
+<?php } ?>
 			</div>
 		</div>	
 	</div>

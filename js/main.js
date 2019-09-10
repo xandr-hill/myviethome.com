@@ -301,12 +301,10 @@ Design and Developed by: http://devitems.com/
     function changeSrc() {
         $.each( $('img[data-src]'), function(key, img) {
             $(this).attr( 'src', $(this).attr('data-src') );
-            $(this).onload = function() {
-                $(this).attr('data-src', '');
-                console.log('data-src of ' + key + '[' + img + '] is empty now...');
-            };
+            $(this).load( function(){
+                $(this).fadeTo(400, 1);
+            });
         });
-
     };
 
 })(jQuery);
